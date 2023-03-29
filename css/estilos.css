@@ -1,3 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+
+.play{
+    font-family: 'Playfair Display', sans-serif;
+}
+
 {margin; 0 
 padding; 0 
 box-sizing: border-box;
@@ -10,6 +19,7 @@ footer{
     background-color: rgba(18, 21, 19, 0.888);
     position: fixed;
     bottom: 0;
+    color: white;
 }
 
 
@@ -19,6 +29,21 @@ background-color: yellow;
 height: 80px; /*altura*/ 
 width: 100%; /*ancho*/
 margin: auto;
+display: flex;
+justify-content: space-between;
+}
+
+header .marca{
+    background-color: #F7CE68;
+    padding: 10px;
+    color: white;
+    font-size: 20pt;
+
+}
+
+header.social{
+    background-color: aquamarine;
+    padding: 0.5cm;
 }
 
 .contenido{
