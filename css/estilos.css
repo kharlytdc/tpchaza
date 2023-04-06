@@ -1,18 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
 
-.play{
+.play {
     font-family: 'Playfair Display', sans-serif;
 }
 
-{margin; 0 
-padding; 0 
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-footer{
+footer {
     /*VERIFICAR margin-bottom: ;CUANDO AGREGUE a contenido*/
     height: 60px;
     width: 100%;
@@ -20,55 +20,75 @@ footer{
     position: fixed;
     bottom: 0;
     color: white;
+    line-height: 60px;
+    text-align: center;
 }
 
 
-header /*ETIQUETA*/
-{
-background-color: yellow;
-height: 80px; /*altura*/ 
-width: 100%; /*ancho*/
-margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
+header
+
+/*ETIQUETA*/
+    {
+    background-color: dimgray;
+    height: 80px;
+    /*altura*/
+    width: 100%;
+    /*ancho*/
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .marca{
+header .marca {
 
     font-size: 20pt;
 
 }
 
-header.social{
+header.social {
     font-size: 40pt;
 }
 
-.social a{
+.social a {
     text-decoration: none;
 
     margin: 0 10px;
 
     color: gray
-
 }
 
-.social a:hover{
+.social a:hover {
 
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 
     text-shadow: 0 0 5px rgb(124, 164, 189);
 
 }
 
-.card{
+.contenedor {
+    display: flex;
+    /*habilita flexbox al contenido de mi selector*/
+    gap: 10px;
+    /*similar a MARGIN*/
+
+}
+
+.card {
     position: relative;
-    width: 30%;
+    flex: 1 0 100px;
+    /*forma abreviada de utilizar las 3 propiedades que vienen a continuación*/
+    flex-grow: 1;
+    /*permite o no que el contenedor se agrande siempre que haya espacio*/
+    flex-shrink: 0;
+    /*permite o no que el contenedor se achique*/
+    flex-basis: 100px;
+    /*permite definir un ancho o alto fijo*/
+    /* width: 60%; */
     height: 500px;
-    background-color: gray;
+    background-color: rgb(116, 112, 112);
     padding: 20px;
     border-radius: 20px;
-
 }
 
 .card .imagen {
@@ -82,26 +102,28 @@ header.social{
 .card .titulo {
     font-size: 18pt;
 }
-.card .boton{
+
+.card .boton {
     position: absolute;
     bottom: 20px;
     right: 20px;
     border-radius: 10px;
-    background-color: red;
+    background-color: rgb(53, 86, 88);
     padding: 10px 30px;
     color: white;
     text-decoration: none;
-    font-size: 
+    font-size: 12pt;
 }
 
-.card .boton :hover{
+.card .boton :hover {
     background-origin: 0 0 5px black;
-.contenido{
-    height: 800px;
-    width: 80%;
-    margin: auto;
-    /* background-color: #FBAB7E;
-background-image: linear-gradient(62deg, #6b74a5 0%, #F7CE68 100%); */
-margin-bottom: 60px;
-
 }
+    .contenido {
+        height: 800px;
+        width: 80%;
+        margin: auto;
+        /* background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #6b74a5 0%, #F7CE68 100%); */
+        margin-bottom: 60px;
+
+    }
