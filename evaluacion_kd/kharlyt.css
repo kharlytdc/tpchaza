@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', sans-serif;
+    ;
+
+}
+
+
+body {
+    width: 100%;
+    background-color: rgb(183, 176, 176);
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 150px;
+}
+
+.portada {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.corazon {
+    position: absolute;
+    text-decoration: none;
+    left: 90%;
+    top: 10px;
+    margin: 0 5px;
+}
+
+.fotop {
+    width: 100%;
+}
+
+.circulo {
+    position: absolute;
+    height: 90px;
+    flex: 1 0 90px;
+    width: 90px;
+    left: calc(50% - 90px);
+    bottom: -75px;
+    border-radius: 50%;
+}
+
+
+.contenedor {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+
+}
+
+.mensaje {
+    position: relative;
+    left: 80px;
+    bottom: -260px;
+    font-size: 15pt;
+}
+
+.buzon {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    position: relative;
+    top: 170px;
+    left: -2px;
+}
+
+.fotop img {
+    object-fit: cover;
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.fotop .nombre {
+    position: relative;
+    text-align: center;
+    bottom: -240px;
+    font-size: 20pt;
+}
+
+.card {
+    border: 1px rgb(202, 221, 250) solid;
+    position: relative;
+    left: 21px;
+    top: 10px;
+    flex: 1 0 190px;
+    height: 190px;
+    width: 420px;
+    background-color: rgb(211, 211, 211);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.posicion {
+    position: relative;
+    bottom: 30px;
+}
+
+.cp {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 14px;
+    border-radius: 100%;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.iconos {
+    position: relative;
+    left: 320px;
+    bottom: -20px;
+    color: rgb(0, 0, 0);
+}
+
+
+.card .nombreperfil {
+    position: relative;
+    left: 50px;
+    top: -45px;
+}
+
+.card .sub {
+    position: relative;
+    left: 50px;
+    top: -40px;
+}
+
+.card .capsula-mensaje {
+    position: relative;
+    top: -20px;
+}
+
+.enviar {
+    position: relative;
+    left: 340px;
+    bottom: -127px;
+}
+
+.comentario input {
+    text-decoration: none;
+    background-color: rgb(157, 155, 155);
+    position: relative;
+    left: 20px;
+    height: 25px;
+    width: 310px;
+    top: -25px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.nav_mobile {
+    height: 35px;
+    width: 100%;
+    background-color: rgb(172, 172, 172);
+    position: fixed;
+    bottom: 0;
+    line-height: 60px;
+}
+
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #d9d6d6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(150, 151, 151, 0.624);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(227, 228, 228);
+    ;
+}
