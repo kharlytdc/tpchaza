@@ -1,30 +1,55 @@
+/* tipografia */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 * {
     margin: 0;
-    padding: 0;
+     padding: 0; /* todo esto es para que no quede bordes */
     box-sizing: border-box;
     transition: all 0.15s ease-in-out;
 }
+/*CONTENEDOR SCROLLBAR-- para que se vea mas lidndo*/
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+} 
 
+/* FONDO BARRA SCROLL*/
+::-webkit-scrollbar-track { /* donde se desliza la barra*/
+    background: #f1f1f1;
+}
+ 
+/* SELECTOR */
+::-webkit-scrollbar-thumb {/* los dos puntos :: son ceudo clase*/
+    background: rgb(109, 223, 185);
+    border-radius: 5px;
+}
+
+/* SELECTOR hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(84, 171, 142);
+    ;
+}
 .play {
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display', sans-serif; 
 }
 
 /*estilos para imagenes de fondo*/
 .bnrep {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center bottom; /* posicion de la imagen*/
 }
+
+/*estilo de proyecto*/
 
 .portada {
     position: relative;
-    background-image: url(../img/restaurante.jpg);
+    background-image: url(../img/restaurante.jpg); /*pone img de fondo*/
     background-color: rgb(110, 103, 102);
     padding: 7%;
     color: white;
-    box-shadow: inset 0 0 250px rgb(0, 0, 0);
+    box-shadow: inset 0 0 250px rgb(0, 0, 0); /*sombreado de img*/
     height: 250px;
 }
 
@@ -33,18 +58,18 @@
     bottom: 70px;
 }
 
-.busqueda {
+.busqueda {/*contenedor de la busqueda del usuario*/
     position: absolute;
     bottom: -20px;
     background-color: rgb(82, 83, 69);
     width: 86%;
-    height: 60px;
+    height: 60px; /*le da tamaño al cuadradito*/
     margin: auto;
-    box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.301);
+    box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.301);/* xy difuminando color*/
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
+    justify-content: space-between; /*que todos los elemntos tengan la misma distancia*/
+    border-radius: 10px; /*reondeo de las puntas*/
     overflow: hidden;
 }
 
@@ -53,7 +78,7 @@
     height: 60px;
     width: 60px;
     text-align: center;
-    line-height: 60px;
+    line-height: 60px; /*para alinear en el eje y utilizar el mismo valor que height*/
 }
 
 .icono.material-icons-outlined {
@@ -61,28 +86,31 @@
 
 }
 
-.busqueda input[type="search"] {
+.busqueda input[type="search"] {/*cuadrado de busqueda*/
     height: 100%;
-    width: calc(100% - 120px);
-    border: none;
-    outline: none;
+    width: calc(100% - 120px); /*claculadora*/
+    border: none; /*saca el borde del cuadrado de busqueda*/
+    outline: none;/*cuandso se seleccione el cuadradito de busqueda no aparecera el marco*/
     padding: 0 20px;
     font-size: 12pt;
 }
 
-.busqueda input[type="submit"] {
-    height: 60px;
+.busqueda input[type="submit"] {/*modifica el icono de buscar*/
+    height: 100;
     width: 60px;
+    font-size: 20px;
 
 }
 
-.busqueda input[type="search"]:focus {
+.busqueda input[type="search"]:focus {/* agranda la tipografia al hacer click*/
     font-size: 14pt;
 }
 
 .busqueda input[type="submit"]:active {
     font-size: 14pt;
 }
+
+/*fin portada*/ 
 
 .menu {
     margin-top: 20px;
@@ -92,9 +120,12 @@
 
 .menu ul {
     display: flex;
+    justify-content: flex-start;  /*se alinea desde la izq*/
+    overflow-x: scroll; /*pra que en el eje x tenga scroll se pueda mover y ver*/
 }
 
 .menu ul li {
+    height: 65px;
     flex: 0 0 100px;
     text-align: center;
     list-style: none;
@@ -104,21 +135,132 @@
 .menu .a {
     color: black;
     text-decoration: none;
+    font-size: 19px
 }
 
-/*------------------54465465465464---------------*/
+/*-----------------fin menu---------------*/
 
 
+.productos {
+    background-color: rgb(126, 144, 156);
+    padding: 20px;
+}
 
-.pa {
+.restos{
+    width: 100%;
+    display: flex;
+    gap: 20px; /*es como el margin cuando tiene el flex*/
+    flex-wrap: wrap; /*que los elemntos se van a acomodar solos y si no hay espacio se mueve para abajo*/
+    align-items: center;
+    padding: 5%;
+}
+
+.listaresto{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 10px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.card{
+    margin: auto;
+    display: flex;
+    flex: 0 0 40%; /* indica la altura o el ancho depemde*/
+    border-radius:  25px 0ox 25px;
+    background-color: aquamarine;
+    box-shadow: black;
+}
+
+.card .img{
+    flex: 0 0 40%;
+    overflow: hidden; /*para lo que sobresale se recorte*/
+    height: 160px;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.img > img{
+    height: 100%;
+    object-fit: cover;
+}
+ 
+.card .datosresto{
+    position: relative;
+    padding: 2%;
+    padding-top: 2%;
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    border-radius: 12px 0;
+}
+
+.titulo a{
+    text-decoration: none;
+    color: black;
+}
+
+.valores{
+    display: flex;
+    justify-content: space-between;
+}
+
+.f12{ /*tamaño de las estrellas y del $*/
+    font-size: 12pt;
+}
+
+.puntuacion{
     position: absolute;
+    top: -6px;
+    right: -6px;
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 12px 0px;
 }
+
+h4{
+    font-size: 10pt;
+    color: aqua;
+}
+
+
+.card .datosresto .calif{
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    position: relative;
+    border-radius: 12px 0px;
+    text-align: center;
+    color: white;
+    font-size: 20pt;
+}
+
+.calificacion{
+    text-align: left;
+    position: relative;
+    font-size: 2px;
+    color: white;
+}
+
+/*    fin producto*/
+
+/*----------------resto.html----------*/
 
 .posrel {
     position: relative;
 }
 
-.valoracion {
+.pa {/*pa de position absolute*/
+    position: absolute;
+}
+
+.valoracion {/*cuadradito de puntuiacion*/
     position: relative;
     background-color: aqua;
     height: 60px;
@@ -149,27 +291,33 @@ main ul {
     justify-content: space-around;
 }
 
+main ul li{text-align: center;}
+
+/*nav mobilees el coso de los links en el bottom de la pagina*/
 .nav_mobile {
-    position: fixed;
+    position: fixed;/*para q un objeto este fijo done quieras*/                            
     bottom: 0;
     width: 100%;
 }
 
 .nav_mobile ul {
-    display: flex;
-    justify-content: space-around;
+    display: flex;/*plica flexbox al contenedor*/
+    justify-content: space-around;/*separa los elementos*/
     list-style: none;
 }
 
-.nav_mobile ul li {
-    height: 40px;
-    line-height: 40px;
-    width: 100%;
-    background-color: blue;
-    text-align: center;
+
+.nav_mobile a{
+    text-decoration: none;
+    color: gray;
 }
 
-/* propiedades para menu.hmtl*/
+.nav_mobile ul li:hover{
+    color:  black;
+    border-top: solid 4px rgb(212, 84, 84);
+}
+
+/*------------------menu. html---------------*/
 
 .banner {
     width: 100%;
@@ -186,10 +334,34 @@ main ul {
 
 .banner button:hover {
     background-color: aquamarine;
+    box-shadow: 0  0 15 px -3px black;
+}
+
+main{
+    background-color:  rgba(252, 252, 252, 0.884 );
 }
 
 .item_menu {
     background-color: burlywood;
+    width: 100%;
+}
+
+.item_menu span{
+    width: 100%;
+    padding: 12px;
+    line-height: 1.6; /*el espacioentre las palabras*/
+}
+
+.item_menu span a{
+    font-size: 15pt;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+h6{
+    font-size: 10pt;
+    text-decoration: none;
+    color: blueviolet;
 }
 
 .plato {
@@ -199,59 +371,40 @@ main ul {
     border-radius: 50%;
 }
 
-.item_menu p {
-    background-color: darkcyan;
+.plato .precio{
+    width: 40px;
+    height: 30px;
+    background-color: blueviolet;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    bottom: 10px;
+    right: 1px;
+    color: black;
+    font-weight: 700;
+    border-radius: 15px 0;
+    box-shadow: black;
 }
 
-
-.nav_mobile ul li a {
-    text-align: none;
-    color: cyan;
+.plato img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
-.nav_mobile ul li:hover {
-    color: brown;
-    border-top: solid 4px aquamarine;
-}
+.flex{display: flex;}
+.centrar_vert{align-items: center;}
+.centrar_h{justify-content: center;}
+/*fin*/
 
-/*ordenamiento de elementos*/
-.flex {
-    display: flex;
-}
+/*------productos.html----------------*/
 
-.centrar_vert {
-    align-items: center;
-}
-
-.centrar_h {
-    justify-content: center;
-}
-
-
-
-
-
-
-/*54545646--------------------------*/
-.productos {
-    background-color: rgb(126, 144, 156);
-    padding: 20px;
-}
 
 .producto {
     height: 300px;
     width: 100%;
     overflow: hidden;
     background-color: blueviolet;
-}
-
-.producto .titulo {
-    z-index: 100000;
-    background-color: cadetblue;
-    height: 20px;
-    width: 70%;
-    bottom: 0;
-    margin: 0;
 }
 
 
@@ -261,42 +414,109 @@ main ul {
     width: 100%;
     z-index: 0;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-.violeta{
-    background-color: violet;
+.producto .titulo {
+    z-index: 10;/*espicifica el nivel de capa del elemento*/
+    background-color: cadetblue;
+    /* height: 20px; */
+    width: 70%;
+    bottom: 5px;
+    padding: 25px;
+    flex-wrap: wrap;
 }
-
-.azul{
-    background-color: blue;
-}
-
-.gris{
-    background-color: gray;
-}
-
-main{
-    background-color: beige;
-    height: 100vh;
-    width: 100%;
-    gap: 10px; /*separacion entre elemntos*/
+.producto .precio{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items:center ;
+    background-color: darkorange;
+    width: 120px;
+    height: 70px;
+    bottom: 25px;
+    right: 20px;
+    line-height: 45px;
+    border-radius: 16px 0;
+    font-size: 25pt;
+    padding: 10px;
+    justify-content: center;
+    color: white;
 }
 
+.producto h2{
+    text-align: left;
+    line-height: 15px;
+    font-size: 30pt;
+}
 
-.cuadrado{
-    height: 80px;
-    width: 80px;
-    color: wheat;
-    text-align: center;
-    align height: 80px;
-    font-size: 36pt;
-    font-family: system-ui;
+.abajo main{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abajo main .info{
+    display: flex;
+    width: 90%;
+    font-size: 12pt;
+    color: antiquewhite;
+    margin: auto ;
+}
+
+.abajo main .note{
+    color: beige;
+    width: 90%;
+    height: 30px;
+    bottom: 120px;
+    padding: 5px;
+    line-height: 2;
+}
+
+.abajo main .note .linea{
+    width: 100%;
+    height: 1px;
+    background-color: coral;
+}
+
+.abajo main .carrito{
+    width: 92%;
+    height: 70px;
+    display: flex;
+    bottom: 15px;
+    justify-content: space-between;
+}
+
+.abajo main .carrito .suma {
+    color: white;
+    display: flex;
+    caret-color: rgb(212, 84, 84);
+    width:  30%;
+    height:  100%;
+    justify-content: center;
+    align-items:  center;
+    font-size: 15pt;
+    text-decoration: dotted;
+}
+
+.abajo main .carrito .suma a{
+    color: white;
+    text-decoration: none;
+}
+
+.abajo main .carrito .suma .num{
+    font-size: 20pt;
+}
+
+.abajo main .carrito .agregar{
+    background-color: darkslategrey;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abajo main .carrito .agregar a{
+    color: aliceblue;
+    font-size: 20pt;
+    text-decoration: none;
 }
