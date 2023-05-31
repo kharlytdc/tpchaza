@@ -10,11 +10,11 @@
 
 body {
     width: 100%;
-    background-color: rgb(183, 176, 176);
+    background-color: rgb(178, 159, 228);
 }
 
 .header {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(85, 255, 18);
     width: 100%;
     height: 150px;
 }
@@ -23,7 +23,7 @@ body {
     position: relative;
     height: 50%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 40, 40);
 }
 
 .corazon {
@@ -40,16 +40,17 @@ body {
 
 .circulo {
     position: absolute;
-    height: 90px;
-    flex: 1 0 90px;
-    width: 90px;
-    left: calc(50% - 90px);
+    height: 90px; /*alto */
+    flex: 1 0 90px; /*para que se adapte al tamaño */
+    width: 90px; /*ancho */
+    left: calc(50% - 90px);  /*posiciona el circulo al medio */
     bottom: -75px;
     border-radius: 50%;
 }
 
 
 .contenedor {
+    background-color: rgb(10, 37, 22);
     position: absolute;
     margin: auto;
     width: 100%;
@@ -57,19 +58,22 @@ body {
 }
 
 .mensaje {
+    background-color: hotpink;
     position: relative;
     left: 80px;
     bottom: -260px;
-    font-size: 15pt;
+     font-size: 15pt; /*tamnaño d la letra */
 }
 
 .buzon {
+    background-color: dodgerblue;
     display: flex;
-    gap: 15px;
-    flex-direction: column;
+    gap: 15px; /*espacio entre cajas  */
+    flex-direction: column; /*caja una abajo d la otra  */
     position: relative;
     top: 170px;
     left: -2px;
+    justify-content: center;
 }
 
 .fotop img {
@@ -81,6 +85,7 @@ body {
 }
 
 .fotop .nombre {
+    background-color: coral;
     position: relative;
     text-align: center;
     bottom: -240px;
@@ -88,14 +93,14 @@ body {
 }
 
 .card {
-    border: 1px rgb(202, 221, 250) solid;
+    border: 1px rgb(204, 255, 86) solid;
     position: relative;
     left: 21px;
     top: 10px;
     flex: 1 0 190px;
     height: 190px;
     width: 420px;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(101, 1, 141);
     padding: 30px;
     border-radius: 20px;
 }
@@ -111,25 +116,27 @@ body {
     width: 40px;
     top: 14px;
     border-radius: 100%;
-    background-color: white;
-    justify-content: space-between;
+    background-color: rgb(95, 42, 42);
+    justify-content: space-between; /* misma distancia entre todas */
 }
 
 .iconos {
     position: relative;
     left: 320px;
     bottom: -20px;
-    color: rgb(0, 0, 0);
+    color: rgb(173, 55, 55);
 }
 
 
 .card .nombreperfil {
+    background-color: blue;
     position: relative;
     left: 50px;
     top: -45px;
 }
 
 .card .sub {
+    background-color: aqua;
     position: relative;
     left: 50px;
     top: -40px;
@@ -138,6 +145,8 @@ body {
 .card .capsula-mensaje {
     position: relative;
     top: -20px;
+    font-size: 10pt;
+    margin-bottom: 17px; /*deja un espacion entre el mergen abajo*/ 
 }
 
 .enviar {
@@ -163,17 +172,17 @@ body {
     background-color: rgb(172, 172, 172);
     position: fixed;
     bottom: 0;
-    line-height: 60px;
+    line-height: 60px; /* separa dos cajas */
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { /* barra */
     height: 0px;
     width: 0px;
     border-radius: 5px;
 }
 
 
-::-webkit-scrollbar-track {
+ ::-webkit-scrollbar-track { /*color d barra */
     background: #d9d6d6;
 }
 
