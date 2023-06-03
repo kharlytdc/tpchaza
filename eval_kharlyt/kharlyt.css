@@ -48,7 +48,6 @@ body {
     border-radius: 50%;
 }
 
-
 .contenedor {
     background-color: rgb(10, 37, 22);
     position: absolute;
@@ -76,6 +75,7 @@ body {
     justify-content: center;
 }
 
+
 .fotop img {
     object-fit: cover;
     position: relative;
@@ -93,7 +93,7 @@ body {
 }
 
 .card {
-    border: 1px rgb(204, 255, 86) solid;
+    border: 1px rgb(64, 92, 0) solid;
     position: relative;
     left: 21px;
     top: 10px;
@@ -157,7 +157,7 @@ body {
 
 .comentario input {
     text-decoration: none;
-    background-color: rgb(157, 155, 155);
+    background-color: rgb(40, 104, 61);
     position: relative;
     left: 20px;
     height: 25px;
@@ -169,7 +169,7 @@ body {
 .nav_mobile {
     height: 35px;
     width: 100%;
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(220, 84, 159);
     position: fixed;
     bottom: 0;
     line-height: 60px; /* separa dos cajas */
@@ -183,7 +183,7 @@ body {
 
 
  ::-webkit-scrollbar-track { /*color d barra */
-    background: #d9d6d6;
+    background: #4e3131;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -192,6 +192,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(227, 228, 228);
+    background: rgb(76, 81, 67);
     ;
 }
