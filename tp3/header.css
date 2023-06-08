@@ -1,0 +1,29 @@
+.head{
+    height: 80px;
+    width: 100%;
+    padding: 12px;
+    margin: auto;
+    background-color: aqua;
+    border-radius:  20px 25px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil{
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+}
+
+.busqueda{
+    width: calc(100% - 120px);
+    height: 60px;
+    background-color: yellow;
+}
+
+.drop_menu{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+}

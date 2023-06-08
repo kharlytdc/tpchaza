@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    background-color: lightpink;
+    height: calc(100vh - 90px);
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    max-width: 662px;
+    background-color: wheat;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.circulo{
+    overflow: hidden;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.centrar__vert{
+    align-items: center;
+}
+
+.centrar__ho{
+    justify-content: center;
+}
