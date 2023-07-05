@@ -16,16 +16,20 @@
 
 <body>
 
+    <div class="hora tamañohora">
+        09:41 <span class="material-icons-outlined"> signal_cellular_altwifibattery_full</span>
+    </div>
+
     <div class="contenedor_principal">
         <header>
             <div class="caja1">
-                <h2 class="nombre montserrat"> Good Morning </h2>
-                <h1 class="descripcion-nombre montserrat"> Kharlyt Delgadillo</h1>
+                <h2 class="nombre montserrat tamañohora"> Good Morning </h2>
+                <h1 class="descripcion-nombre montserrat "> Kharlyt Delgadillo</h1>
             </div>
 
             <article class="foto">
                 <div class="caja_logo">
-                    <img src="../img/messi.jpg">
+                    <img src="../img/messi.jpg" class="img">
                 </div>
             </article> 
         </header>
@@ -36,7 +40,7 @@
     </div>
     <main>
         <div class="buscar">
-            <input class="buscar" type="text">
+            <input class="buscar" type="text" placeholder="search"> 
             <input class="material-icons-outlined" boton type="button" value="search">
 
         </div>
@@ -51,29 +55,51 @@
                 <h5>Yoga</h5>
             </div>
         </div>
-        <div class="recomendados">
-            <div class="caja_titulo">
-                <div class="titulo montserrat">
-                    <h2>for you</h2>
+
+        <section class="tarjetas">
+            <div class="recomendados">
+                <div class="caja_titulo">
+                    <div class="titulo montserrat">
+                        <h2>for you</h2>
+                    </div>
+                    <div class="titulo2 montserrat">
+                        <h3>Show AR</h3>
+                    </div>
                 </div>
-                <div class="titulo2 montserrat">
-                    <h3>Show AR</h3>
-                </div>
-            </div>
-            <div class="publicacion">
-                <div class="img">
+                <div class="publicacion">
+                    <div class="img">
+                        <img src="../img/messi.jpg" class="img">
+                    </div>
                     <div class="texto">
                         <h3>yoga</h3>
                         <div class="nombre">
                             <h4>wiliness</h4>
-                            <div class="descripcion"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-
+        </section>
+        
+        <section class="tarjetas">
+            <div class="recomendados">
+                <div class="caja_titulo">
+                    <div class="titulo montserrat">
+                        <h2>for you</h2>
+                    </div>
+                </div>
+                <div class="publicacion">
+                    <div class="img">
+                        <img src="../img/messi.jpg" class="img">
+                    </div>
+                    <div class="texto">
+                        <h3>yoga</h3>
+                        <div class="nombre">
+                            <h4>wiliness</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     </main>
