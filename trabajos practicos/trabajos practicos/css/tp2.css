@@ -16,12 +16,12 @@
 
 /* FONDO BARRA SCROLL*/
 ::-webkit-scrollbar-track { /* donde se desliza la barra*/
-    background: #f1f1f1;
+    background: #7ca196;
 }
  
 /* SELECTOR */
 ::-webkit-scrollbar-thumb {/* los dos puntos :: son ceudo clase*/
-    background: rgb(109, 223, 185);
+    background: rgb(72, 121, 122);
     border-radius: 5px;
 }
 
@@ -61,7 +61,7 @@
 .busqueda {/*contenedor de la busqueda del usuario*/
     position: absolute;
     bottom: -20px;
-    background-color: rgb(82, 83, 69);
+    background-color: rgb(100, 101, 86);
     width: 86%;
     height: 60px; /*le da tamaño al cuadradito*/
     margin: auto;
@@ -74,7 +74,8 @@
 }
 
 .busqueda .icono {
-    background-color: rgb(68, 100, 81);
+    background-color: rgb(104, 91, 66);
+    /* background-color: white; */
     height: 60px;
     width: 60px;
     text-align: center;
@@ -83,7 +84,11 @@
 
 .icono.material-icons-outlined {
     font-size: 24pt;
+}
 
+.icono_busqueda {
+    background-color: rgb(100, 101, 86);
+    color: white;
 }
 
 .busqueda input[type="search"] {/*cuadrado de busqueda*/
@@ -519,4 +524,8 @@ h6{
     color: aliceblue;
     font-size: 20pt;
     text-decoration: none;
+}
+.botonbusqueda
+{
+
 }
