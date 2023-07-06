@@ -37,7 +37,7 @@ header{
 }
 
 .caja_logo .img {
-    background-color: rgb(43, 4, 4);
+    background-color: rgb(255, 249, 249);
     height: auto;
     flex: 1 0 90px;
     width: 80px;
@@ -126,4 +126,8 @@ header{
 .icons {
     position: fixed;
     bottom: 0;    
+}
+
+.tarjetas{
+    
 }
