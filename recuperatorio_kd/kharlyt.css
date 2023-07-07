@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +13,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-header{
+.header{
+    background-color: aqua;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,5 +130,5 @@ header{
 }
 
 .tarjetas{
-    
+    background-color: antiquewhite;
 }
